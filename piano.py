@@ -2,18 +2,15 @@ import pandas as pd
 import random 
 import  os
 
-START_PROMPT = "白まで:1  ピンクまで:2  茶色まで:3  番号を選んでください"
+START_PROMPT = "なつき:1  ちひろ:2   番号を選んでください"
 ERROR_PROMPT = "半角数値で入力してください"
 print(START_PROMPT)
 user_choice = input('>>> ')
 
 try:
-    colors = ['R','Y','BL','BK','G','O','W']
+    colors = ['R','Y','BL','BK','G','O','P']
     if user_choice == "2":
-        colors.append('P')
- 
-    elif user_choice == "3":
-        colors.append('P','BR')
+        colors.append('W')
 
 
     df=pd.DataFrame({1:random.choices(colors,k=20)})
